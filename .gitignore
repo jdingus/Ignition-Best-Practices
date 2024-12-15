@@ -57,3 +57,4 @@ build/
 *.bak
 *.orig
 *.rej
+.env

@@ -2,6 +2,11 @@
 
 This repository provides a categorized collection of best practices for working with Inductive Automation's Ignition platform. Each section covers a specific area, with concise advice and links to detailed external resources.
 
+## Disclaimer
+This repository contains community-contributed best practices and recommendations for working with Inductive Automation's Ignition platform. All content is provided "as is", without warranty of any kind, express or implied. Neither the contributors, maintainers, nor anyone associated with this repository shall be liable for any claim, damages, or other liability arising from the use or inability to use the information provided here. Using these practices in a production environment is entirely at your own risk.
+
+Ignition® is a registered trademark of Inductive Automation.
+
 ## Table of Contents
 - [Gateway Configuration](sections/gateway-configuration.md)
 - [Perspective Views](sections/perspective-views.md)
