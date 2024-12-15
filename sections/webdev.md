@@ -73,5 +73,7 @@ The Web Development Module (WebDev) enables developers to create custom RESTful 
 - [Ignition Scripting API](https://docs.inductiveautomation.com/display/DOC81/Scripting+Functions)
 
 ---
+[Back to README](../README.md)
+---
 
 Feel free to contribute additional tips or corrections by submitting a pull request!

@@ -62,5 +62,7 @@ Databases are integral to many Ignition projects, storing historical data, confi
 - [Named Queries Documentation](https://docs.inductiveautomation.com/display/DOC81/Named+Queries)
 
 ---
+[Back to README](../README.md)
+---
 
 Feel free to contribute additional tips or corrections by submitting a pull request!
