@@ -73,7 +73,7 @@ The Reporting Module in Ignition allows users to create dynamic and visually app
 - [Named Queries Documentation](https://docs.inductiveautomation.com/display/DOC81/Named+Queries)
 
 ---
-[Back to README](../README.md)
+[Back to Home](../README.md)
 ---
 
 Feel free to contribute additional tips or corrections by submitting a pull request!

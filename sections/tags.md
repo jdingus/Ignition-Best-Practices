@@ -60,7 +60,7 @@ Tags are a foundational part of Ignition, representing points of data that can b
 - [Tag Historian Module](https://docs.inductiveautomation.com/display/DOC81/Tag+Historian+Module)
 
 ---
-[Back to README](../README.md)
+[Back to Home](../README.md)
 ---
 
 Feel free to contribute additional tips or corrections by submitting a pull request!

@@ -71,7 +71,7 @@ Perspective views are the building blocks of user interfaces in Ignition project
 - [Perspective Built-In Themes](https://docs.inductiveautomation.com/display/DOC81/Perspective+Built-In+Themes)
 
 ---
-[Back to README](../README.md)
+[Back to Home](../README.md)
 ---
 
 Feel free to contribute additional tips or corrections by submitting a pull request!

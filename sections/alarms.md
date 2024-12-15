@@ -66,7 +66,7 @@ Alarm Notification Pipelines allow you to manage the flow of alarm notifications
 
 ---
 
-[Back to README](../README.md)
+[Back to Home](../README.md)
 
 ---
 

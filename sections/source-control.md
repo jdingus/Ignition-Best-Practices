@@ -70,7 +70,7 @@ Using source control systems like Git for Ignition projects enables collaboratio
 - [Version Control in Ignition](https://docs.inductiveautomation.com/display/DOC81/Version+Control+and+Collaboration)
 
 ---
-[Back to README](../README.md)
+[Back to Home](../README.md)
 ---
 
 Feel free to contribute additional tips or corrections by submitting a pull request!

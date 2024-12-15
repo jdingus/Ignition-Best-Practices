@@ -60,7 +60,7 @@ Gateway scripts allow you to automate tasks and implement logic at the Gateway l
 - [PEP-8 Style Guide](https://peps.python.org/pep-0008/)
 
 ---
-[Back to README](../README.md)
+[Back to Home](../README.md)
 ---
 
 Feel free to contribute additional tips or corrections by submitting a pull request!

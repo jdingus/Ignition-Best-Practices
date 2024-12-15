@@ -58,7 +58,7 @@ Proper Gateway configuration is critical to ensuring stability, maintainability,
 - [Enterprise Administration Module](https://inductiveautomation.com/eam)
 
 ---
-[Back to README](../README.md)
+[Back to Home](../README.md)
 ---
 
 Feel free to contribute additional tips or corrections by submitting a pull request!
