@@ -24,3 +24,42 @@ Check out our [Contributing](contributing.md) guide to get started.
 
 ---
 
+# Ignition Best Practices
+
+This repository provides a categorized collection of best practices for working with Inductive Automation's Ignition platform. Each section covers a specific area, with concise advice and links to detailed external resources.
+
+## Disclaimer
+This repository contains community-contributed best practices and recommendations for working with Inductive Automation's Ignition platform. All content is provided "as is", without warranty of any kind, express or implied. Neither the contributors, maintainers, nor anyone associated with this repository shall be liable for any claim, damages, or other liability arising from the use or inability to use the information provided here. Using these practices in a production environment is entirely at your own risk.
+
+Ignition® is a registered trademark of Inductive Automation.
+
+## Table of Contents
+- [Gateway Configuration](sections/gateway-configuration.md)
+- [Perspective Views](sections/perspective-views.md)
+- [Gateway Scripting](sections/gateway-scripting.md)
+- [Tags](sections/tags.md)
+- [Database Integration](sections/database-integration.md)
+- [Testing and Deployment](sections/testing-deployment.md)
+- [Source Control](sections/source-control.md)
+- [Reports](sections/reports.md)
+- [Web Development Module](sections/webdev.md)
+- [Alarm Notification Pipelines](sections/alarms.md)
+
+---
+
+### Contribution
+Feel free to contribute by submitting a pull request or opening an issue with suggestions.
+
+### External Links
+- [Inductive Automation Documentation](https://docs.inductiveautomation.com/)
+- [Ignition Exchange](https://inductiveautomation.com/exchange)
+- [Ignition Community Forum](https://forum.inductiveautomation.com/)
+
+---
+
+## License
+This project is licensed under the MIT License. See the - [LICENSE](license) file for details.
+
+---
+
+[Back to README](README.md)
