@@ -3,6 +3,9 @@
 .AppleDouble
 .LSOverride
 
+# aider files
+.aider*
+
 # macOS System Files
 Icon?
 ._*
