@@ -56,7 +56,7 @@ Tags are a foundational part of Ignition, representing points of data that can b
 ---
 
 ## Links to More Information
-- [Tag Browser and Tag Editing](https://docs.inductiveautomation.com/display/DOC81/Tag+Browser+and+Tag+Editing)
+- [Tag Browser and Tag Editing](https://docs.inductiveautomation.com/search?q=tag-browser-and-tag-editing)
 - [Tag Historian Module](https://docs.inductiveautomation.com/display/DOC81/Tag+Historian+Module)
 
 ---
