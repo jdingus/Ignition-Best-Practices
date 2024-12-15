@@ -28,6 +28,6 @@ Feel free to contribute by submitting a pull request or opening an issue with su
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE (license.txt) file for details.
+This project is licensed under the MIT License. See the [LICENSE](license.txt) file for details.
 
 
