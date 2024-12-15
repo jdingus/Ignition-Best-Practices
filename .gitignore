@@ -1,0 +1,56 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS System Files
+Icon?
+._*
+
+# macOS Thumbnails
+.Thumbnails
+
+# macOS Temporary Files
+.fseventsd
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+
+# Node Modules (if using Node.js)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+*.log
+logs/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Python Bytecode
+*.pyc
+*.pyo
+__pycache__/
+
+# Temporary Files
+*.swp
+*.swo
+*.tmp
+
+# Build Artifacts
+dist/
+build/
+
+# Docusaurus
+.build/
+.cache/
+
+# Git
+.idea/
+*.lock
+*.bak
+*.orig
+*.rej
