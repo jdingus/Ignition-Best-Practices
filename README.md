@@ -3,12 +3,6 @@
   <p><strong>A Community-Driven Collection of Best Practices for Inductive Automation's Ignition Platform</strong></p>
 </div>
 
-> ### ⚠️ Alpha Status Notice
-> **This repository is currently in active development!**  
-> - Content is being actively developed and refined
-> - Best practices are being gathered from community experiences
-> - Documentation is continuously improving
-
 ### 🤝 Join Our Community of Contributors!
 We're building this resource together! Whether you have years of experience or fresh perspectives, we welcome your contributions:
 
