@@ -18,9 +18,6 @@ Check out our [Contributing](contributing.md) guide to get started.
 
 <a href="https://github.com/jdingus/Ignition-Best-Practices"><img src="https://img.shields.io/badge/Ignition-Best_Practices-2ea44f?style=for-the-badge&logo=github" alt="Ignition Best Practices"></a>
 ---
-
-# Ignition Best Practices
-
 This repository provides a categorized collection of best practices for working with Inductive Automation's Ignition platform. Each section covers a specific area, with concise advice and links to detailed external resources.
 
 ## Disclaimer
