@@ -20,6 +20,7 @@ We're building this resource together! Whether you have years of experience or f
 
 Check out our [Contributing](contributing.md) guide to get started.
 
+<a href="https://github.com/jdingus/Ignition-Best-Practices"><img src="https://img.shields.io/badge/Ignition-Best_Practices-2ea44f?style=for-the-badge&logo=github" alt="Ignition Best Practices"></a>
 ---
 
 # Ignition Best Practices
