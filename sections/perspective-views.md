@@ -66,6 +66,12 @@ Perspective views are the building blocks of user interfaces in Ignition project
 
 ---
 
+## Performance Optimization
+
+- [DMC : Optimizing Load Times in Ignition Perspective](https://www.dmcinfo.com/latest-thinking/blog/id/13664/dmc-presents-at-icc-optimizing-load-times-in-ignition-perspective)
+
+---
+
 ## Links to More Information
 - [Ignition Perspective Documentation](https://docs.inductiveautomation.com/display/DOC81/Perspective+Module)
 - [Perspective Built-In Themes](https://docs.inductiveautomation.com/display/DOC81/Perspective+Built-In+Themes)
