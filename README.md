@@ -1,7 +1,9 @@
 <div align="center">
-  <h1>🔧 [Ignition Best Practices](https://jdingus.github.io/Ignition-Best-Practices/)</h1>
+ <h1>🔧 - Ignition Best Practices</h1>
   <p><strong>A Community-Driven Collection of Best Practices for Inductive Automation's Ignition Platform</strong></p>
 </div>
+
+[Ignition Best Practices - Website](https://jdingus.github.io/Ignition-Best-Practices/)
 
 ### 🤝 Join Our Community of Contributors!
 We're building this resource together! Whether you have years of experience or fresh perspectives, we welcome your contributions:
