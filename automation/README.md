@@ -2,9 +2,22 @@
 
 This automation system allows you to automatically process and incorporate Ignition-related content from URLs (blog posts, articles, documentation) into the best practices repository.
 
-## 🎉 Two Ways to Ingest Content
+## 🎉 Three Ways to Ingest Content
 
-### Option 1: Claude Code (FREE - Recommended!)
+### Option 1: GitHub Issues (On The Go - FREE!)
+
+**Perfect for mobile or when away from your computer!**
+
+[Create an issue](../.github/ISSUE_TEMPLATE/ingest-content.md) with a URL, then process it later with Claude Code.
+
+✅ Works from anywhere (mobile, tablet, desktop)
+✅ No setup required
+✅ No API key needed
+✅ Process when you're ready
+
+See [GITHUB_ISSUE_WORKFLOW.md](GITHUB_ISSUE_WORKFLOW.md) for details.
+
+### Option 2: Claude Code Interactive (FREE - At Your Computer!)
 
 **Uses your existing Claude Code subscription - no API key or extra costs!**
 
@@ -20,7 +33,7 @@ Then follow the prompts to use Claude Code interactively. See [CLAUDE_CODE_WORKF
 ✅ Uses your existing subscription
 ✅ Process unlimited URLs
 
-### Option 2: API Script (Automated)
+### Option 3: API Script (Automated)
 
 **For automation, CI/CD, and batch processing (requires API key)**
 
@@ -28,6 +41,7 @@ Best for:
 - GitHub Actions automation
 - Batch processing many URLs
 - Scheduled/automated workflows
+- Fully hands-off operation
 
 Requires Anthropic API key (pay-per-token). See setup below.
 

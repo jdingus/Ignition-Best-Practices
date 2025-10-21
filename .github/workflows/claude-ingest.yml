@@ -1,0 +1,46 @@
+name: Claude Code - Auto Ingest from Issues
+
+on:
+  issues:
+    types: [opened, labeled]
+  issue_comment:
+    types: [created]
+
+permissions:
+  issues: write
+  contents: write
+  pull-requests: write
+
+jobs:
+  claude-ingest:
+    # Only run if issue has 'content-ingestion' label OR @claude is mentioned
+    if: |
+      (github.event.issue.labels[*].name contains 'content-ingestion') ||
+      (github.event.comment && contains(github.event.comment.body, '@claude'))
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run Claude Code
+        uses: anthropics/claude-code-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Claude will read the issue and execute the content-ingest skill
+          prompt: |
+            This issue contains a URL for content ingestion into the Ignition Best Practices repository.
+
+            Please:
+            1. Extract the URL from the issue body
+            2. Use the content-ingest skill to fetch and analyze the content
+            3. Update the appropriate section markdown files
+            4. Create a pull request with the changes
+            5. Comment on the issue with a summary of what was added
+
+            Issue #${{ github.event.issue.number }}:
+            ${{ github.event.issue.body }}

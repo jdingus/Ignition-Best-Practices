@@ -20,12 +20,13 @@ We now support automated ingestion of Ignition-related content! Simply provide a
 - Categorize content into appropriate sections
 - Update documentation automatically
 
-**Quick Start (uses your existing Claude Code subscription):**
-```bash
-./automation/ingest_with_claude.sh "https://your-article-url.com"
-```
+**Three ways to ingest content (all FREE with Claude Code!):**
 
-See the [Claude Code Workflow Guide](automation/CLAUDE_CODE_WORKFLOW.md) for step-by-step instructions, or the [Automation Guide](automation/README.md) for all options.
+1. **📱 On the go (Mobile/Anywhere):** [Create a GitHub issue](../../issues/new?labels=content-ingestion&template=ingest-content.md) with a URL - process it later!
+2. **💻 At your computer:** Run `./automation/ingest_with_claude.sh "https://url.com"`
+3. **🤖 Fully automated:** Set up GitHub Actions to auto-process issues (requires API key)
+
+See the [GitHub Issue Workflow](automation/GITHUB_ISSUE_WORKFLOW.md), [Claude Code Workflow Guide](automation/CLAUDE_CODE_WORKFLOW.md), or [Automation Guide](automation/README.md) for details.
 
 ---
 
