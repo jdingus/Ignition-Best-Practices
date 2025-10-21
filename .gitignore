@@ -58,3 +58,9 @@ build/
 *.orig
 *.rej
 .env
+
+# Automation
+automation/.env
+automation/*.json
+automation/__pycache__/
+*.pyc

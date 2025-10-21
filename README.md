@@ -14,6 +14,14 @@ We're building this resource together! Whether you have years of experience or f
 
 Check out our [Contributing](contributing.md) guide to get started.
 
+### 🤖 Automated Content Ingestion
+We now support automated ingestion of Ignition-related content! Simply provide a URL to a blog post, article, or documentation, and our AI-powered system will:
+- Extract relevant best practices
+- Categorize content into appropriate sections
+- Update documentation automatically
+
+See the [Automation Guide](automation/README.md) for setup and usage instructions.
+
 ---
 
 This repository provides a categorized collection of best practices for working with Inductive Automation's Ignition platform. Each section covers a specific area, with concise advice and links to detailed external resources.
