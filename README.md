@@ -14,13 +14,18 @@ We're building this resource together! Whether you have years of experience or f
 
 Check out our [Contributing](contributing.md) guide to get started.
 
-### 🤖 Automated Content Ingestion
+### 🤖 Automated Content Ingestion (FREE with Claude Code!)
 We now support automated ingestion of Ignition-related content! Simply provide a URL to a blog post, article, or documentation, and our AI-powered system will:
 - Extract relevant best practices
 - Categorize content into appropriate sections
 - Update documentation automatically
 
-See the [Automation Guide](automation/README.md) for setup and usage instructions.
+**Quick Start (uses your existing Claude Code subscription):**
+```bash
+./automation/ingest_with_claude.sh "https://your-article-url.com"
+```
+
+See the [Claude Code Workflow Guide](automation/CLAUDE_CODE_WORKFLOW.md) for step-by-step instructions, or the [Automation Guide](automation/README.md) for all options.
 
 ---
 

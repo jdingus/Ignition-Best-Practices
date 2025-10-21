@@ -2,6 +2,37 @@
 
 This automation system allows you to automatically process and incorporate Ignition-related content from URLs (blog posts, articles, documentation) into the best practices repository.
 
+## 🎉 Two Ways to Ingest Content
+
+### Option 1: Claude Code (FREE - Recommended!)
+
+**Uses your existing Claude Code subscription - no API key or extra costs!**
+
+Simply run:
+```bash
+./automation/ingest_with_claude.sh "https://your-url-here.com"
+```
+
+Then follow the prompts to use Claude Code interactively. See [CLAUDE_CODE_WORKFLOW.md](CLAUDE_CODE_WORKFLOW.md) for details.
+
+✅ No setup required
+✅ No API key needed
+✅ Uses your existing subscription
+✅ Process unlimited URLs
+
+### Option 2: API Script (Automated)
+
+**For automation, CI/CD, and batch processing (requires API key)**
+
+Best for:
+- GitHub Actions automation
+- Batch processing many URLs
+- Scheduled/automated workflows
+
+Requires Anthropic API key (pay-per-token). See setup below.
+
+---
+
 ## Features
 
 - **Automated Content Extraction**: Fetches content from any URL
@@ -10,6 +41,22 @@ This automation system allows you to automatically process and incorporate Ignit
 - **Best Practice Extraction**: Identifies and extracts actionable best practices
 - **Link Management**: Adds external resource links to appropriate sections
 - **Dry Run Mode**: Preview changes before applying them
+
+## Quick Start (Claude Code - FREE!)
+
+**Just run the helper script and follow the prompts:**
+
+```bash
+./automation/ingest_with_claude.sh "https://inductiveautomation.com/blog/your-article"
+```
+
+For complete details, see [CLAUDE_CODE_WORKFLOW.md](CLAUDE_CODE_WORKFLOW.md)
+
+---
+
+# API Script Setup (Optional)
+
+**Only needed if you want automated/batch processing. For manual use, stick with Claude Code above!**
 
 ## Setup
 
