@@ -1,173 +1,129 @@
-# Automated Content Ingestion
+# Automated Content Ingestion - Using Claude Code (FREE!)
 
-This automation system allows you to automatically process and incorporate Ignition-related content from URLs (blog posts, articles, documentation) into the best practices repository.
+**Uses your existing Claude Code subscription - no API keys, no extra costs!**
 
-## 🎉 Three Ways to Ingest Content
+This system allows you to automatically process and incorporate Ignition-related content from URLs (blog posts, articles, documentation) into the best practices repository using your existing Claude Code subscription.
 
-### Option 1: GitHub Issues (On The Go - FREE!)
+---
 
-**Perfect for mobile or when away from your computer!**
+## How It Works
 
-[Create an issue](../.github/ISSUE_TEMPLATE/ingest-content.md) with a URL, then process it later with Claude Code.
+This repository includes a **Claude Code Skill** (`.skills/content-ingest/SKILL.md`) that teaches Claude how to ingest content automatically.
 
-✅ Works from anywhere (mobile, tablet, desktop)
-✅ No setup required
-✅ No API key needed
-✅ Process when you're ready
+### The Skill
+
+The skill enables Claude to:
+- Extract and fetch content from URLs
+- Analyze relevance to Ignition SCADA
+- Categorize into appropriate sections
+- Extract best practices
+- Update markdown files
+- Add external links
+
+---
+
+## Two Ways to Use It
+
+### Method 1: On The Go (Mobile/Anywhere)
+
+**Perfect for when you're reading an article on your phone or away from your computer.**
+
+1. **Capture the URL** - [Create a GitHub issue](../.github/ISSUE_TEMPLATE/ingest-content.md) with the URL
+2. **Add label** - Apply the `content-ingestion` label
+3. **Process later** - When you're back at your computer with Claude Code:
+   ```bash
+   cd Ignition-Best-Practices
+   claude
+   > Process issue #XX - ingest the URL from that issue
+   ```
 
 See [GITHUB_ISSUE_WORKFLOW.md](GITHUB_ISSUE_WORKFLOW.md) for details.
 
-### Option 2: Claude Code Interactive (FREE - At Your Computer!)
+### Method 2: Direct Processing (At Your Computer)
 
-**Uses your existing Claude Code subscription - no API key or extra costs!**
+**Perfect for immediate processing when you have a URL.**
 
-Simply run:
+1. **Open Claude Code:**
+   ```bash
+   cd Ignition-Best-Practices
+   claude
+   ```
+
+2. **Simply ask Claude to ingest:**
+   ```
+   Ingest this URL: https://inductiveautomation.com/blog/your-article
+   ```
+
+   Or:
+   ```
+   Process this article: https://example.com/ignition-tips
+   ```
+
+3. **Claude automatically:**
+   - Uses the content-ingest skill
+   - Fetches and analyzes the content
+   - Updates section files
+   - Shows you what was added
+
+4. **Review and commit:**
+   ```bash
+   git diff
+   git add sections/
+   git commit -m "Add content from article"
+   git push
+   ```
+
+See [CLAUDE_CODE_WORKFLOW.md](CLAUDE_CODE_WORKFLOW.md) for details.
+
+---
+
+## Complete Example
+
+You find a great article on your phone about Perspective performance:
+
+**Step 1 (On mobile):**
+- Create GitHub issue
+- Paste URL: `https://inductiveautomation.com/blog/perspective-perf`
+- Add `content-ingestion` label
+- Done! Continue reading.
+
+**Step 2 (Later at computer):**
+```bash
+cd Ignition-Best-Practices
+claude
+> Process issue #5 - ingest that Perspective performance article
+
+# Claude fetches, analyzes, and updates files automatically
+# Shows you: "Added 3 best practices to perspective-views.md"
+
+git diff sections/perspective-views.md  # Review
+git add sections/
+git commit -m "Add Perspective performance tips from issue #5"
+git push
+```
+
+**Total cost:** $0 (uses your existing Claude Code subscription!)
+
+---
+
+## Helper Script
+
+For convenience, we provide a helper script that gives you step-by-step instructions:
+
 ```bash
 ./automation/ingest_with_claude.sh "https://your-url-here.com"
 ```
 
-Then follow the prompts to use Claude Code interactively. See [CLAUDE_CODE_WORKFLOW.md](CLAUDE_CODE_WORKFLOW.md) for details.
-
-✅ No setup required
-✅ No API key needed
-✅ Uses your existing subscription
-✅ Process unlimited URLs
-
-### Option 3: API Script (Automated)
-
-**For automation, CI/CD, and batch processing (requires API key)**
-
-Best for:
-- GitHub Actions automation
-- Batch processing many URLs
-- Scheduled/automated workflows
-- Fully hands-off operation
-
-Requires Anthropic API key (pay-per-token). See setup below.
+This script:
+- Shows you what to type in Claude Code
+- Copies the URL to your clipboard
+- Provides clear next steps
 
 ---
-
-## Features
-
-- **Automated Content Extraction**: Fetches content from any URL
-- **AI-Powered Analysis**: Uses Claude AI to analyze and categorize content
-- **Smart Categorization**: Automatically determines which sections the content belongs to
-- **Best Practice Extraction**: Identifies and extracts actionable best practices
-- **Link Management**: Adds external resource links to appropriate sections
-- **Dry Run Mode**: Preview changes before applying them
-
-## Quick Start (Claude Code - FREE!)
-
-**Just run the helper script and follow the prompts:**
-
-```bash
-./automation/ingest_with_claude.sh "https://inductiveautomation.com/blog/your-article"
-```
-
-For complete details, see [CLAUDE_CODE_WORKFLOW.md](CLAUDE_CODE_WORKFLOW.md)
-
----
-
-# API Script Setup (Optional)
-
-**Only needed if you want automated/batch processing. For manual use, stick with Claude Code above!**
-
-## Setup
-
-### 1. Install Dependencies
-
-```bash
-cd automation
-pip install -r requirements.txt
-```
-
-### 2. Configure API Key
-
-1. Get your Anthropic API key from [https://console.anthropic.com/](https://console.anthropic.com/)
-2. Copy the example environment file:
-   ```bash
-   cp .env.example .env
-   ```
-3. Edit `.env` and add your API key:
-   ```
-   ANTHROPIC_API_KEY=your_actual_api_key_here
-   ```
-
-## Usage
-
-### Basic Usage
-
-Ingest content from a URL:
-
-```bash
-python ingest_content.py "https://example.com/ignition-blog-post"
-```
-
-### Dry Run (Preview Only)
-
-Preview what changes would be made without modifying files:
-
-```bash
-python ingest_content.py --dry-run "https://example.com/ignition-blog-post"
-```
-
-### Save Analysis to File
-
-Save the analysis results to a JSON file:
-
-```bash
-python ingest_content.py --output analysis.json "https://example.com/ignition-blog-post"
-```
-
-### Using API Key from Command Line
-
-Instead of using a .env file, you can provide the API key directly:
-
-```bash
-python ingest_content.py --api-key "your_api_key" "https://example.com/ignition-blog-post"
-```
-
-## How It Works
-
-1. **Fetch Content**: The script fetches the webpage and extracts the text content
-2. **AI Analysis**: Claude AI analyzes the content to:
-   - Determine if it's relevant to Ignition
-   - Identify which sections it applies to
-   - Extract best practices and recommendations
-   - Identify useful external links
-3. **Update Files**: The script updates the appropriate markdown files in the `sections/` directory
-4. **Review**: Review the changes using `git diff` before committing
-
-## Example Workflow
-
-```bash
-# 1. Run in dry-run mode to preview
-python ingest_content.py --dry-run "https://inductiveautomation.com/blog/troubleshooting-cpu"
-
-# 2. If it looks good, run for real
-python ingest_content.py "https://inductiveautomation.com/blog/troubleshooting-cpu"
-
-# 3. Review the changes
-git diff
-
-# 4. If satisfied, commit the changes
-git add sections/
-git commit -m "Add CPU troubleshooting best practices from IA blog"
-git push
-```
-
-## Supported Content Types
-
-The system works best with:
-- Blog posts about Ignition
-- Technical articles and tutorials
-- Documentation pages
-- Forum posts with best practices
-- Case studies and implementation guides
 
 ## Repository Sections
 
-The automation can add content to these sections:
+Content can be added to these sections:
 
 - `gateway-configuration` - Gateway setup and configuration
 - `perspective-views` - Perspective view development
@@ -180,87 +136,79 @@ The automation can add content to these sections:
 - `webdev` - Web Development Module
 - `alarms` - Alarm notification pipelines
 
-## Output Format
+---
 
-The script provides detailed output:
+## Guides
 
+- **[SIMPLE_GUIDE.md](SIMPLE_GUIDE.md)** - Quick overview
+- **[CLAUDE_CODE_WORKFLOW.md](CLAUDE_CODE_WORKFLOW.md)** - Direct processing guide
+- **[GITHUB_ISSUE_WORKFLOW.md](GITHUB_ISSUE_WORKFLOW.md)** - Mobile capture workflow
+
+---
+
+## FAQs
+
+### Does this cost money?
+
+**No!** It uses your existing Claude Code subscription. Process as many URLs as you want at no extra cost.
+
+### Do I need to set up API keys?
+
+**No!** No API keys, no secrets, no setup. Just use Claude Code.
+
+### Can I process multiple URLs at once?
+
+Yes! Just ask Claude:
 ```
-============================================================
-Ingesting content from URL
-============================================================
-
-Fetching content from: https://example.com/article
-✓ Fetched 15234 characters
-
-Analyzing content with Claude AI...
-✓ Analysis complete
-
-Content Summary: Article discusses gateway performance optimization...
-Sections to update: gateway-configuration, testing-deployment
-
-Updating: sections/gateway-configuration.md
-Updating: sections/testing-deployment.md
-
-✓ Updated 2 section file(s)
-
-============================================================
-Ingestion complete!
-============================================================
+Ingest these URLs:
+- https://example.com/article1
+- https://example.com/article2
 ```
+
+### What if the content isn't relevant?
+
+Claude will analyze it and let you know if it's not relevant to Ignition SCADA. You can manually add it if you disagree.
+
+### Can I adjust what Claude adds?
+
+Absolutely! Review the changes with `git diff`, then adjust manually if needed before committing.
+
+---
 
 ## Troubleshooting
 
-### "ANTHROPIC_API_KEY must be set"
+### "Claude doesn't understand what to do"
 
-Make sure you've created a `.env` file with your API key, or pass it via `--api-key`.
+Make sure:
+- You're running Claude Code from the repository root
+- The `.skills/content-ingest/` directory exists
+- You're on the main branch (or a branch with the skill)
 
-### "Failed to fetch URL content"
-
-- Check that the URL is accessible
-- Some websites may block automated requests
-- Try accessing the URL in a browser first
-
-### "Content is not relevant to Ignition"
-
-The AI determined the content isn't related to Ignition SCADA. You can:
-- Try a different URL
-- Manually add the content if you believe it's relevant
-
-## Advanced Usage
-
-### Batch Processing
-
-Process multiple URLs:
-
-```bash
-#!/bin/bash
-urls=(
-    "https://example.com/article1"
-    "https://example.com/article2"
-    "https://example.com/article3"
-)
-
-for url in "${urls[@]}"; do
-    echo "Processing: $url"
-    python ingest_content.py "$url"
-    sleep 2  # Rate limiting
-done
+Try being more specific:
+```
+Use the content-ingest skill to process this URL: https://example.com
 ```
 
-### Integration with GitHub Actions
+### "Skill not found"
 
-You can set up a GitHub Action to process URLs from issues or PR comments. See the example workflow in `.github/workflows/` (if available).
+Pull the latest from main:
+```bash
+git checkout main
+git pull origin main
+```
 
-## Contributing
+The skill should be in `.skills/content-ingest/SKILL.md`
 
-If you improve the automation system, please submit a pull request! Some ideas for enhancements:
+---
 
-- Support for PDF documents
-- Video transcript processing
-- Multi-language support
-- Duplicate detection
-- Automated PR creation
+## Summary
 
-## License
+**Capture on the go** → Create GitHub issue with URL
 
-This automation tool is part of the Ignition Best Practices repository and is licensed under the MIT License.
+**Process when ready** → Use Claude Code with the skill
+
+**Cost** → $0 (uses your existing subscription)
+
+**Setup required** → None!
+
+Simple, free, and uses the tools you already have! 🚀

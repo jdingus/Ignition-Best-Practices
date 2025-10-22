@@ -1,21 +1,34 @@
 # Content Ingestion - Simple Guide
 
-**Three ways to add content to the repo. All use the same `.skills/content-ingest/SKILL.md` - no conflicts!**
+**One skill, two ways to use it. All FREE with your existing Claude Code subscription!**
 
 ---
 
-## The Three Methods
+## How It Works
+
+This repo has a **Claude Code Skill** at `.skills/content-ingest/SKILL.md` that teaches Claude how to automatically:
+- Fetch content from URLs
+- Analyze relevance to Ignition SCADA
+- Extract best practices
+- Update markdown files
+- Add external links
+
+---
+
+## The Two Ways
 
 ### 1. GitHub Issues (📱 Mobile-Friendly)
 
-**Perfect for:** On the go, mobile, capturing links quickly
+**Perfect for:** Capturing URLs on the go
 
-**How it works:**
+**How:**
 1. Create a GitHub issue with a URL
 2. Add the `content-ingestion` label
-3. Later, process with Claude Code
-
-**No conflicts because:** Issues are just a way to capture URLs for later processing
+3. Later, process with Claude Code:
+   ```
+   claude
+   > Process issue #XX - ingest the URL
+   ```
 
 **Files used:** `.skills/content-ingest/SKILL.md`
 
@@ -23,16 +36,14 @@
 
 ---
 
-### 2. Claude Code Interactive (💻 At Your Computer)
+### 2. Claude Code Direct (💻 At Your Computer)
 
-**Perfect for:** Immediate processing, full control
+**Perfect for:** Immediate processing
 
-**How it works:**
+**How:**
 1. Run `claude` in the repo
 2. Say: `Ingest this URL: https://example.com`
 3. Claude uses the skill automatically
-
-**No conflicts because:** Direct interaction with Claude, uses the same skill
 
 **Files used:** `.skills/content-ingest/SKILL.md`
 
@@ -40,66 +51,29 @@
 
 ---
 
-### 3. API Script (🤖 Automation)
-
-**Perfect for:** Batch processing, CI/CD, scheduled jobs
-
-**How it works:**
-1. Set up API key (one-time)
-2. Run: `python ingest_content.py "https://example.com"`
-3. Automated processing
-
-**No conflicts because:** Completely separate Python script, doesn't use Claude Code
-
-**Files used:** `automation/ingest_content.py` (standalone)
-
-[Full guide →](README.md#api-script-setup-optional)
-
----
-
-## How They Work Together
-
-```
-Method 1 (GitHub Issues)  ──┐
-                            ├──> Uses .skills/content-ingest/SKILL.md
-Method 2 (Claude Code)    ──┘
-
-Method 3 (API Script)     ───> Uses standalone Python script
-```
-
-**No redundancy:**
-- Methods 1 & 2 share the same skill (efficient!)
-- Method 3 is completely separate (for automation)
-- All three update the same section files
-- Choose the method that fits your situation
-
----
-
 ## Quick Decision Guide
 
 **On your phone?** → GitHub Issues (Method 1)
 
-**At your computer with Claude Code?** → Interactive (Method 2)
-
-**Need automation/batching?** → API Script (Method 3)
+**At your computer?** → Direct (Method 2)
 
 ---
 
-## What We Removed (Simplified!)
+## Cost
 
-❌ **Removed:** Redundant slash command (`.claude/commands/ingest-url.md`)
+**$0** - Uses your existing Claude Code subscription
 
-✅ **Kept:** The skill (`.skills/content-ingest/SKILL.md`) - more powerful and flexible
+**No API keys** - No setup required
 
-**Why?** The skill is model-invoked (Claude knows when to use it automatically), while the slash command required typing `/ingest-url` every time. The skill is just better!
+**Unlimited** - Process as many URLs as you want
 
 ---
 
 ## Summary
 
-- **1 Skill** (`.skills/content-ingest/SKILL.md`) - Used by Methods 1 & 2
-- **1 Python Script** (`ingest_content.py`) - Used by Method 3
-- **No conflicts** - Each method has its purpose
-- **No redundancy** - We removed the duplicate slash command
+- **1 Skill** (`.skills/content-ingest/SKILL.md`) - Used by both methods
+- **2 Ways to use it** - Mobile or desktop
+- **No API keys** - Just your Claude Code subscription
+- **No conflicts** - Simple and clean!
 
-Choose the method that works for your situation. They all produce the same great results!
+Choose the method that works for your situation. They both produce the same great results!
