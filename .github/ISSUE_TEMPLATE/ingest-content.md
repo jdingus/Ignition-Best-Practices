@@ -25,22 +25,29 @@ This helps Claude understand and categorize the content better.
 
 ## 🤖 What Happens Next?
 
-### Manual Processing (FREE - No API key needed!)
-A maintainer will process this issue using Claude Code:
-```bash
-claude
-> Process issue #XX using the content-ingest skill
-```
-**Cost:** $0 (uses existing Claude Code subscription)
+### ⚙️ Automated Processing Status
 
-### Automated Processing (If configured)
-If the repo has automation set up, Claude will:
+**Current Status:** Automation requires setup (see below)
+
+**If automation is configured**, commenting `@claude` will:
 1. Automatically fetch and analyze the URL
 2. Update the appropriate section files
 3. Create a pull request with changes
 4. Comment here with a summary
 
-To trigger automation, mention `@claude` in a comment below!
+**Setup Required:** See [GitHub Actions Setup Guide](../automation/GITHUB_ACTIONS_SETUP.md) for:
+- Merging skill to main branch
+- Adding ANTHROPIC_API_KEY to secrets
+- Enabling workflow permissions
+
+### Manual Processing (FREE - Always Works!)
+A maintainer can process this issue using Claude Code:
+```bash
+claude
+> Process issue #XX using the content-ingest skill
+```
+**Cost:** $0 (uses existing Claude Code subscription)
+**Works immediately:** No setup required!
 
 ---
 
