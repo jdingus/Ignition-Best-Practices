@@ -11,11 +11,13 @@ This guide shows you how to use your existing Claude Code subscription to ingest
 - ✅ **Interactive** - Review and approve changes as Claude works
 - ✅ **Flexible** - Easy to adjust and refine on the fly
 
-## Two Methods Available
+## How It Works
 
-### Method 1: Slash Command (Recommended)
+### The Content-Ingest Skill
 
-This is the easiest way to ingest content with Claude Code.
+This repository includes a **Claude Code Skill** (`.skills/content-ingest/SKILL.md`) that teaches Claude how to ingest content automatically. Just tell Claude what you want in natural language!
+
+### Method 1: Direct Request (Recommended)
 
 #### Step 1: Open Claude Code in this repository
 
@@ -24,21 +26,19 @@ cd /path/to/Ignition-Best-Practices
 claude
 ```
 
-#### Step 2: Use the ingest-url command
+#### Step 2: Simply ask Claude to ingest the URL
 
-In Claude Code, type:
 ```
-/ingest-url
-```
-
-#### Step 3: Provide the URL
-
-When Claude asks, paste your URL:
-```
-https://inductiveautomation.com/blog/your-article-here
+Ingest this URL: https://inductiveautomation.com/blog/your-article-here
 ```
 
-#### Step 4: Claude will automatically:
+Or:
+```
+Process this article and add it to the repo: https://example.com/article
+```
+
+Claude will **automatically**:
+- Use the content-ingest skill
 - Fetch the content from the URL
 - Analyze it for relevance to Ignition
 - Determine which sections it applies to
@@ -46,7 +46,7 @@ https://inductiveautomation.com/blog/your-article-here
 - Update the appropriate markdown files
 - Show you a summary of changes
 
-#### Step 5: Review and commit
+#### Step 3: Review and commit
 
 ```bash
 git diff                    # Review changes
@@ -96,11 +96,10 @@ Next Steps:
 1. Run Claude Code in this repository:
    claude
 
-2. Use the ingest-url command:
-   /ingest-url
+2. Simply ask Claude to ingest the URL:
+   Ingest https://inductiveautomation.com/blog/perspective-performance-tips
 
-3. When Claude asks, provide this URL:
-   https://inductiveautomation.com/blog/perspective-performance-tips
+3. Claude will automatically process it using the content-ingest skill
 
 [... rest of instructions ...]
 ```
@@ -111,13 +110,10 @@ Next Steps:
 # Step 1: Start Claude Code
 $ claude
 
-# Step 2: In Claude Code, type
-> /ingest-url
+# Step 2: Simply ask Claude to ingest the URL
+> Ingest this URL: https://inductiveautomation.com/blog/perspective-performance-tips
 
-# Step 3: Paste your URL when prompted
-> https://inductiveautomation.com/blog/perspective-performance-tips
-
-# Step 4: Claude will process it and update files
+# Step 3: Claude uses the content-ingest skill automatically and updates files
 # Claude: "I've analyzed the content and added 3 best practices to
 #          sections/perspective-views.md. Here's what was added:
 #          - Use component pooling for repeating elements
@@ -169,9 +165,9 @@ All of this uses your Claude Code subscription - no API calls, no extra charges!
 
 Make sure Claude Code is installed and in your PATH. If you just installed it, you may need to restart your terminal.
 
-### "I don't see the /ingest-url command"
+### "Claude doesn't know how to ingest content"
 
-Make sure you're running Claude Code from the repository root directory where the `.claude/commands/` directory exists.
+Make sure you're running Claude Code from the repository root directory where the `.skills/` directory exists. Claude should automatically detect and use the content-ingest skill.
 
 ### The content wasn't relevant
 
@@ -181,20 +177,17 @@ If Claude determines content isn't relevant to Ignition, it will let you know. Y
 
 ### Want to process multiple URLs?
 
-Just run the slash command multiple times, or create a simple loop:
+Just ask Claude to process multiple URLs:
 
 ```bash
 # Start Claude Code once
 claude
 
-# Then in Claude Code, repeatedly use:
-/ingest-url
-# (paste URL 1)
-
-/ingest-url
-# (paste URL 2)
-
-# etc.
+# Then ask Claude to process them:
+Ingest these URLs:
+- https://example.com/article1
+- https://example.com/article2
+- https://example.com/article3
 ```
 
 ## When to Use the API Script Instead
