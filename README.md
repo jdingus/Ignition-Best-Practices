@@ -15,18 +15,19 @@ We're building this resource together! Whether you have years of experience or f
 Check out our [Contributing](contributing.md) guide to get started.
 
 ### 🤖 Automated Content Ingestion (FREE with Claude Code!)
-We now support automated ingestion of Ignition-related content! Simply provide a URL to a blog post, article, or documentation, and our AI-powered system will:
+We now support automated ingestion of Ignition-related content! Simply provide a URL to a blog post, article, or documentation, and Claude will:
 - Extract relevant best practices
 - Categorize content into appropriate sections
 - Update documentation automatically
 
-**Three ways to ingest content (all FREE with Claude Code!):**
+**Two ways to ingest content (uses your existing Claude Code subscription):**
 
-1. **📱 On the go (Mobile/Anywhere):** [Create a GitHub issue](../../issues/new?labels=content-ingestion&template=ingest-content.md) with a URL - process it later!
-2. **💻 At your computer:** Run `./automation/ingest_with_claude.sh "https://url.com"`
-3. **🤖 Fully automated:** Set up GitHub Actions to auto-process issues (requires API key)
+1. **📱 On the go (Mobile/Anywhere):** [Create a GitHub issue](../../issues/new?labels=content-ingestion&template=ingest-content.md) with a URL - process it later with Claude Code!
+2. **💻 At your computer:** Open Claude Code and say: `Ingest this URL: https://example.com/article`
 
-See the [GitHub Issue Workflow](automation/GITHUB_ISSUE_WORKFLOW.md), [Claude Code Workflow Guide](automation/CLAUDE_CODE_WORKFLOW.md), or [Automation Guide](automation/README.md) for details.
+**Cost:** $0 - Uses your existing Claude Code subscription. No API keys needed!
+
+See the [Automation Guide](automation/README.md) for complete documentation.
 
 ---
 
