@@ -1,6 +1,6 @@
 ---
 name: Ingest Content
-about: Capture a URL to be processed later - perfect for mobile!
+about: Submit a URL to be processed and added to the best practices - works from anywhere!
 title: 'Ingest: [Brief description]'
 labels: content-ingestion
 assignees: ''
@@ -16,7 +16,7 @@ assignees: ''
 
 <!--
 Any notes about why this content is valuable or what it covers.
-This helps when processing the issue later.
+This helps Claude understand and categorize the content better.
 -->
 
 
@@ -25,31 +25,39 @@ This helps when processing the issue later.
 
 ## 🤖 What Happens Next?
 
-A maintainer will process this issue using Claude Code:
+### Automatic Processing (Claude Code Pro)
+
+If you have Claude Code Pro with GitHub Actions enabled, simply:
+
+**Option 1: Add the label**
+- This issue has the `content-ingestion` label
+- GitHub Actions will automatically process it!
+
+**Option 2: Mention @claude**
+- Comment: `@claude please ingest this URL`
+- GitHub Actions will automatically process it!
+
+Claude will:
+1. Fetch and analyze the URL
+2. Update the appropriate section files
+3. Create a pull request with changes
+4. Comment here with a summary
+
+**Cost:** $0 - Uses your Claude Code Pro subscription!
+
+### Manual Processing (Alternative)
+
+You can also process this manually with Claude Code:
 
 ```bash
 claude
 > Process issue #XX - ingest the URL
 ```
 
-**How it works:**
-1. Claude uses the `content-ingest` skill (automatically!)
-2. Fetches and analyzes the URL
-3. Updates the appropriate section files
-4. Shows what was added
-
-**Cost:** $0 - uses existing Claude Code subscription!
-
----
-
-## 💡 Tip
-
-This issue template is perfect for capturing URLs on the go (mobile, tablet, etc). Just paste the URL, add the label, and process it later when you're back at your computer!
-
 ---
 
 ## 📖 Learn More
 
-- [GitHub Issue Workflow Guide](../automation/GITHUB_ISSUE_WORKFLOW.md)
+- [Automation Guide](../automation/README.md)
+- [GitHub Issue Workflow](../automation/GITHUB_ISSUE_WORKFLOW.md)
 - [Claude Code Workflow](../automation/CLAUDE_CODE_WORKFLOW.md)
-- [All Documentation](../automation/README.md)
